@@ -1,16 +1,12 @@
-const  spawn  = require('child_process').spawn;
-const scriptExecution = spawn("python", ["./App.py"]);
+var PythonShell = require('python-shell');
 
+var options = {
+    mode: 'text',
+    args: [100, 200]
+};
 
-var dataString;
-scriptExecution.stdout.on('data', (data) => {
-    dataString += data.toString();
-    dataString = dataString.replace( "undefined", "" );
-    console.log(dataString);
+PythonShell.run('./App.py', options, function (err, results) {
+    if (err) throw err;
+    // results is an array consisting of messages collected during execution
+    console.log(parseInt(results));
 });
-
-
-var data = JSON.stringify([100,200]);
-scriptExecution.stdin.write(data);
-// console.log(data);
-scriptExecution.stdin.end();

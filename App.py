@@ -1,13 +1,5 @@
-import sys, json
+import sys
 
-lines = sys.stdin.readlines()
-num = json.loads(lines[0])
-
-total_sum = 0
-for item in num:
-    total_sum += item
-
-
+list = sys.argv
+total_sum = int(list[1])+int(list[2])
 print total_sum
-
-

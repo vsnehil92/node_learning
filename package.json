@@ -1,0 +1,23 @@
+{
+  "name": "node_learning",
+  "version": "1.0.0",
+  "description": "node learning ",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node App.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsnehil92/node_learning.git"
+  },
+  "author": "node <vsnehil92@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vsnehil92/node_learning/issues"
+  },
+  "homepage": "https://github.com/vsnehil92/node_learning#readme",
+  "dependencies": {
+    "python-shell": "^0.5.0"
+  }
+}
