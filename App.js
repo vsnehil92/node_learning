@@ -1,12 +1,20 @@
 var PythonShell = require('python-shell');
+module.exports = {
+    add: function(num1, num2, cb){
+        try{
+            // console.log("hello")
+            var options = {
+                mode: 'text',
+                args: [num1, num2]
+            };
 
-var options = {
-    mode: 'text',
-    args: [100, 200]
-};
-
-PythonShell.run('./App.py', options, function (err, results) {
-    if (err) throw err;
-    // results is an array consisting of messages collected during execution
-    console.log(parseInt(results));
-});
+            PythonShell.run('./App.py', options, function (err, results) {
+                if (err) throw err;
+                // console.log(results)
+                return cb(parseInt(results));
+            });
+        }catch (error) {
+            cb(error);
+        }    
+    }
+}
