@@ -9,7 +9,8 @@ this will install all the dependencies. Now type the command:<br />
 this will run the test on the script App.js.<br />
 
 ## Usage
-```var addition = require('./App.js');
+```javascript
+var addition = require('./App.js');
 
 addition.add(100,200,(err, result) => {
     if (err) {
@@ -17,4 +18,5 @@ addition.add(100,200,(err, result) => {
     } else {
         console.log(result);
     }
-})```
+})
+```
